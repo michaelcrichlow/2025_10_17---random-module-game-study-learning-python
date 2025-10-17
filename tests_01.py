@@ -1,6 +1,6 @@
 import random
 
-MATH_CONSTANTS = {
+RANDOM_CONSTANTS = {
     # random starts with choice...
     "choice": "(function) Choose a random element from a non-empty sequence.",
     "choices": "(function) Returns a list with k randomly selected elements from the specified sequence. k can be larger than the length of the original list.",
@@ -41,13 +41,13 @@ MATH_CONSTANTS = {
 
 
 def main():
-    keys = list(MATH_CONSTANTS.keys())
+    keys = list(RANDOM_CONSTANTS.keys())
     random.shuffle(keys)
     total = len(keys)
     count = 0
 
     for test_key in keys:
-        user_key = input(f"\nDefine a function that returns the value for:\n→ {MATH_CONSTANTS[test_key]}\n→ ").strip()
+        user_key = input(f"\nDefine a function that returns the value for:\n→ {RANDOM_CONSTANTS[test_key]}\n→ ").strip()
         if user_key == test_key or (user_key == "math." + test_key):
             print("✅ Correct!")
             count += 1
